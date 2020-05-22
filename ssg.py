@@ -1,9 +1,8 @@
 import typer
 from ssg.site import Site
 
-def __main__(source="content", dest="dist"):
-    config = {"source":source, "dest":dest}
-    s = Site(**config)
-    s.build()
+def main(source="content", dest="dist"):
+    config = {"source": source, "dest": dest}
+    Site(**config).build()
 
-typer.run(__main__)
+typer.run(main)
